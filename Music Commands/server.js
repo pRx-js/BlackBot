@@ -1,16 +1,16 @@
 const { Client, RichEmbed } = require("discord.js");
-const yt_api_key = "AIzaSyDV2JNcnCiCEW99ON7vvwBN5JkDWaIXkXc"
+const yt_api_key = "AIzaSyDt4NVwfgkbmPWMnRrZ07ANwbE5kTLIDAs"
 const client = new Client({ disableEveryone: true})
 const ytdl = require("ytdl-core");
-const devs = ["505638480248963072"]   
+const devs = ["385001389119504384"]   
 const convert = require("hh-mm-ss")
 const fetchVideoInfo = require("youtube-info");
 const bot = require('./package.json');
 const simpleytapi = require('simple-youtube-api')
 const youtube = new simpleytapi(yt_api_key);
 const config = require('../config/config.json')
-const prefix = config.prefix;
-client.login(config.token);
+const prefix = process.env.PREFIX;
+client.login(process.env.TOKEN);
 var guilds = {};
 
 
